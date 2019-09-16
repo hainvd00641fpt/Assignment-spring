@@ -1,0 +1,6 @@
+<h2>Hero list</h2>
+<ul>
+  <li *ngFor="let make of makes">
+    {{make.name}} - {{make.description}}- {{make.createAt| date: 'dd/MM/yyyy HH:mm:ss'}}- {{make.updateAt| date: 'dd/MM/yyyy HH:mm:ss'}} - {{make.status}}
+  </li>
+</ul>

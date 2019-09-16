@@ -1,0 +1,13 @@
+<h2>Hero list</h2>
+<div class="d-flex justify-content-around">
+
+  <div class="card w-25 mb-5 mt-5">
+    <input type="text" [(ngModel)]="name" placeholder="search">
+    <button class="btn btn-danger" (click)="findByName()">Filter by name</button>
+  </div>
+</div>
+<ul>
+  <li *ngFor="let coin of coins">
+    {{coin.name}} - {{coin.baseAsset}}- {{coin.quoteAsset}}-{{coin.volumn24h}} - {{coin.lastPrice}} -{{coin.marketId_id}} - {{coin.createdAt| date: 'dd/MM/yyyy HH:mm:ss'}} - {{coin.updatedAt| date: 'dd/MM/yyyy HH:mm:ss'}} - {{coin.status}}
+  </li>
+</ul>
